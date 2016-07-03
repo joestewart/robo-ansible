@@ -14,7 +14,6 @@ trait loadTasks
         return new SimpleServiceProvider(
             [
                 'taskAnsibleAnsible' => Ansible::class,
-                'taskAnsibleVersion' => Version::class,
             ]
         );
     }
