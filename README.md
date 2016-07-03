@@ -2,22 +2,22 @@
 Ansbile tasks for Robo Task Runner
 
 [![Build Status](https://travis-ci.org/joestewart/robo-ansible.svg?branch=master)](https://travis-ci.org/joestewart/robo-ansible)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/800f42d0-51b1-4f51-b6f6-e66ea8af488a/mini.png)](https://insight.sensiolabs.com/projects/800f42d0-51b1-4f51-b6f6-e66ea8af488a)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/9dcbc05a-c554-47c0-afeb-a106e75c409e/mini.png)](https://insight.sensiolabs.com/projects/9dcbc05a-c554-47c0-afeb-a106e75c409e)
 
 This package provides Robo tasks for the following ansible commands:
                           
- ansible
-  ansible:help                   Ansible Help task.
-  ansible:version                Ansible Version task.
+    ansible
+     ansible:help                   Ansible Help task.
+     ansible:version                Ansible Version task.
 
- ansiblegalaxy
-  ansiblegalaxy:help             Ansible Galaxy Help task.
-  ansiblegalaxy:list             Ansible Galaxy List task.
-  ansiblegalaxy:version          Ansible Galaxy Version task.
+    ansiblegalaxy
+     ansiblegalaxy:help             Ansible Galaxy Help task.
+     ansiblegalaxy:list             Ansible Galaxy List task.
+     ansiblegalaxy:version          Ansible Galaxy Version task.
 
- ansibleplaybook
-  ansibleplaybook:help           Ansible Playbook Help task.
-  ansibleplaybook:version        Ansible Playbook Version task.
+    ansibleplaybook
+     ansibleplaybook:help           Ansible Playbook Help task.
+     ansibleplaybook:version        Ansible Playbook Version task.
 
 
 
