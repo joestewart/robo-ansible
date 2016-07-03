@@ -26,7 +26,7 @@ class GalaxyList extends Base
      */
     public function force()
     {
-        $this->option('--force';
+        $this->option('--force');
 
         return $this;
     }
