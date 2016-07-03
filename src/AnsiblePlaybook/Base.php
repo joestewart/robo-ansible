@@ -53,3 +53,4 @@ abstract class Base extends BaseTask
         return "{$this->command} {$this->action}{$this->arguments}";
     }
 }
+

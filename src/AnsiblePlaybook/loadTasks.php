@@ -26,4 +26,4 @@ trait loadTasks
         return new Playbook($pathToAnsiblePlaybook);
     }
 
-} 
+}

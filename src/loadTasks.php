@@ -27,4 +27,4 @@ trait loadTasks
         return new Ansible($pathToAnsible);
     }
     
-} 
+}
