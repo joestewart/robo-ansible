@@ -36,7 +36,7 @@ class GalaxyList extends Base
      *
      * @return $this
      */
-    public function ignore_errors()
+    public function ignoreErrors()
     {
         $this->option('--ignore-errors');
 
@@ -48,7 +48,7 @@ class GalaxyList extends Base
      *
      * @return $this
      */
-    public function roles_file($roles_file = '')
+    public function rolesFile($roles_file = '')
     {
         $this->option('--roles-file=' . $roles_file);
 
