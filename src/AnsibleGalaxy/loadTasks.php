@@ -44,4 +44,4 @@ trait loadTasks
         return new GalaxyList($pathToAnsibleGalaxy);
     }
 
-} 
+}

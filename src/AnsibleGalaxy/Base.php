@@ -41,7 +41,7 @@ abstract class Base extends BaseTask
      *
      * @return $this
      */
-    public function roles_path($roles_path = '')
+    public function rolesPath($roles_path = '')
     {
         $this->option('--roles-path=' . $roles_path);
 
