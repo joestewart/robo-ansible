@@ -38,7 +38,7 @@ class GalaxyList extends Base
      */
     public function ignore_errors()
     {
-        $this->option('--ignore-errors';
+        $this->option('--ignore-errors');
 
         return $this;
     }
