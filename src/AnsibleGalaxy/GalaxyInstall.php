@@ -15,7 +15,7 @@ namespace JoeStewart\Robo\Task\Ansible\AnsibleGalaxy;
  * ?>
  * ```
  */
-class GalaxyList extends Base
+class GalaxyInstall extends Base
 {
     protected $action = 'install';
 
