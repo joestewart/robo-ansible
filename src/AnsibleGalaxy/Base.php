@@ -37,6 +37,18 @@ abstract class Base extends BaseTask
     }
 
     /**
+     * adds `ignore-certs` option to ansible-galaxy
+     *
+     * @return $this
+     */
+    public function ignoreCerts()
+    {
+        $this->option('--ignore-certs');
+
+        return $this;
+    }
+
+    /**
      * adds `roles-path` option to ansible
      *
      * @return $this
@@ -44,6 +56,30 @@ abstract class Base extends BaseTask
     public function rolesPath($roles_path = '')
     {
         $this->option('--roles-path=' . $roles_path);
+
+        return $this;
+    }
+
+    /**
+     * adds `server` option to ansible-galaxy
+     *
+     * @return $this
+     */
+    public function server($server)
+    {
+        $this->option('--server=' . $server);
+
+        return $this;
+    }
+
+    /**
+     * adds `verbose` option to ansible-galaxy
+     *
+     * @return $this
+     */
+    public function verbose($verbosity = 'v')
+    {
+        $this->option('-' . $verbosity);
 
         return $this;
     }

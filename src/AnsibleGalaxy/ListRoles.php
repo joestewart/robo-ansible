@@ -7,15 +7,15 @@ namespace JoeStewart\Robo\Task\Ansible\AnsibleGalaxy;
  * ```php
  * <?php
  * // simple execution
- * $this->taskAnsibleGalaxyList()->run();
+ * $this->taskAnsibleListRoles()->run();
  *
  * // with custom path
- * $this->taskAnsibleGalaxyList('path/to/my/ansible')
+ * $this->taskAnsibleListRoles('path/to/my/ansible')
  *      ->run();
  * ?>
  * ```
  */
-class GalaxyList extends Base
+class ListRoles extends Base
 {
     protected $action = 'list';
 

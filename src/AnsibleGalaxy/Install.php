@@ -15,7 +15,7 @@ namespace JoeStewart\Robo\Task\Ansible\AnsibleGalaxy;
  * ?>
  * ```
  */
-class GalaxyInstall extends Base
+class Install extends Base
 {
     protected $action = 'install';
 
@@ -44,7 +44,7 @@ class GalaxyInstall extends Base
     }
 
     /**
-     * adds `help` option to ansible
+     * adds `roles-file` option to ansible
      *
      * @return $this
      */
@@ -57,7 +57,7 @@ class GalaxyInstall extends Base
 
     public function run()
     {
-        $this->printTaskInfo('ansible-galaxy install' . $this->arguments);
+        $this->printTaskInfo('ansible-galaxy ' . $this->action . $this->arguments);
         return $this->executeCommand($this->getCommand());
     }
 }

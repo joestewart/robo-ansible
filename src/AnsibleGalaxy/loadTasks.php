@@ -14,8 +14,15 @@ trait loadTasks
         return new SimpleServiceProvider(
             [
                 'taskAnsibleGalaxy' => Galaxy::class,
-                'taskAnsibleGalaxyInstall' => GalaxyInstall::class,
-                'taskAnsibleGalaxyList' => GalaxyList::class,
+                'taskAnsibleGalaxyDelete' => Delete::class,
+                'taskAnsibleGalaxyImport' => Import::class,
+                'taskAnsibleGalaxyInit' => Init::class,
+                'taskAnsibleGalaxyInstall' => Install::class,
+                'taskAnsibleGalaxyList' => ListRolest::class,
+                'taskAnsibleGalaxyLogin' => Login::class,
+                'taskAnsibleGalaxyRemove' => Remove::class,
+                'taskAnsibleGalaxySearch' => Search::class,
+                'taskAnsibleGalaxySetup' => Setup::class,
             ]
         );
     }
@@ -30,10 +37,42 @@ trait loadTasks
 
     /**
      * @param null $pathToAnsible
+     * @return AnsibleGalaxyDelete
+     */
+    protected function taskAnsibleGalaxyDelete($pathToAnsibleGalaxy = null) {
+        return new Delete($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxyImport
+     */
+    protected function taskAnsibleGalaxyImport($pathToAnsibleGalaxy = null) {
+        return new Import($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxyInfo
+     */
+    protected function taskAnsibleGalaxyInfo($pathToAnsibleGalaxy = null) {
+        return new Info($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxyInit
+     */
+    protected function taskAnsibleGalaxyInit($pathToAnsibleGalaxy = null) {
+        return new Init($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
      * @return AnsibleGalaxyList
      */
     protected function taskAnsibleGalaxyInstall($pathToAnsibleGalaxy = null) {
-        return new GalaxyInstall($pathToAnsibleGalaxy);
+        return new Install($pathToAnsibleGalaxy);
     }
 
     /**
@@ -41,7 +80,39 @@ trait loadTasks
      * @return AnsibleGalaxyList
      */
     protected function taskAnsibleGalaxyList($pathToAnsibleGalaxy = null) {
-        return new GalaxyList($pathToAnsibleGalaxy);
+        return new ListRoles($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxyLogin
+     */
+    protected function taskAnsibleGalaxyLogin($pathToAnsibleGalaxy = null) {
+        return new Login($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxyRemove
+     */
+    protected function taskAnsibleGalaxyRemove($pathToAnsibleGalaxy = null) {
+        return new Remove($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxySearch
+     */
+    protected function taskAnsibleGalaxySearch($pathToAnsibleGalaxy = null) {
+        return new Search($pathToAnsibleGalaxy);
+    }
+
+    /**
+     * @param null $pathToAnsible
+     * @return AnsibleGalaxySearch
+     */
+    protected function taskAnsibleGalaxySetup($pathToAnsibleGalaxy = null) {
+        return new Setup($pathToAnsibleGalaxy);
     }
 
 }
