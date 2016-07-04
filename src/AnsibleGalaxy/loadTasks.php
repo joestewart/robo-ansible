@@ -18,7 +18,7 @@ trait loadTasks
                 'taskAnsibleGalaxyImport' => Import::class,
                 'taskAnsibleGalaxyInit' => Init::class,
                 'taskAnsibleGalaxyInstall' => Install::class,
-                'taskAnsibleGalaxyList' => ListRolest::class,
+                'taskAnsibleGalaxyList' => ListRoles::class,
                 'taskAnsibleGalaxyLogin' => Login::class,
                 'taskAnsibleGalaxyRemove' => Remove::class,
                 'taskAnsibleGalaxySearch' => Search::class,
