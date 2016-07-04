@@ -94,8 +94,11 @@ class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
     {
         $command = $this->taskAnsibleGalaxyInit('/usr/local/bin/ansible-galaxy')
             ->arg('testowner.testname')
+            ->force()
+            ->initPath('INIT_PATH')
+            ->offline()
             ->getCommand();
-        $expected = '/usr/local/bin/ansible-galaxy init testowner.testname';
+        $expected = '/usr/local/bin/ansible-galaxy init testowner.testname --force --init-path=INIT_PATH --offline';
         $this->assertEquals($expected, $command);
     }
 
