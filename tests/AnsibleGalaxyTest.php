@@ -73,8 +73,11 @@ class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
     {
         $command = $this->taskAnsibleGalaxyImport('/usr/local/bin/ansible-galaxy')
             ->arg('github_user github_repo')
+            ->branch('REFERENCE')
+            ->noWait()
+            ->status()
             ->getCommand();
-        $expected = '/usr/local/bin/ansible-galaxy import github_user github_repo';
+        $expected = '/usr/local/bin/ansible-galaxy import github_user github_repo --branch=REFERENCE --no-wait --status';
         $this->assertEquals($expected, $command);
     }
 
