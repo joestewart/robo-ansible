@@ -7,19 +7,21 @@ Ansbile tasks for Robo Task Runner
 This package provides Robo tasks for the following ansible commands:
                           
     ansible
-     ansible:help                   Ansible Help task.
-     ansible:version                Ansible Version task.
 
     ansiblegalaxy
-     ansiblegalaxy:help             Ansible Galaxy Help task.
-     ansiblegalaxy:list             Ansible Galaxy List task.
-     ansiblegalaxy:version          Ansible Galaxy Version task.
-
+       delete
+       help 
+       import
+       info 
+       init
+       install
+       list
+       login
+       remove
+       search
+       setup
+  
     ansibleplaybook
-     ansibleplaybook:help           Ansible Playbook Help task.
-     ansibleplaybook:version        Ansible Playbook Version task.
-
-
 
 ##Installation
 

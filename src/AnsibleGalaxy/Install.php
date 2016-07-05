@@ -44,13 +44,25 @@ class Install extends Base
     }
 
     /**
-     * adds `roles-file` option to ansible
+     * adds `--no-deps` option to ansible-galaxy
      *
      * @return $this
      */
-    public function rolesFile($roles_file = '')
+    public function noDeps()
     {
-        $this->option('--roles-file=' . $roles_file);
+        $this->option('--no-deps');
+
+        return $this;
+    }
+
+    /**
+     * adds `role-file` option to ansible
+     *
+     * @return $this
+     */
+    public function roleFile($role_file = '')
+    {
+        $this->option('--role-file=' . $role_file);
 
         return $this;
     }

@@ -105,9 +105,13 @@ class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
     public function testAnsibleGalaxyInstallAction()
     {
         $command = $this->taskAnsibleGalaxyInstall('/usr/local/bin/ansible-galaxy')
-            ->arg('testowner.testname')
+            ->force()
+            ->ignoreErrors()
+            ->noDeps()
+            ->roleFile('ROLE_FILE')
+            ->arg('role_name')
             ->getCommand();
-        $expected = '/usr/local/bin/ansible-galaxy install testowner.testname';
+        $expected = '/usr/local/bin/ansible-galaxy install --force --ignore-errors --no-deps --role-file=ROLE_FILE role_name';
         $this->assertEquals($expected, $command);
     }
 
