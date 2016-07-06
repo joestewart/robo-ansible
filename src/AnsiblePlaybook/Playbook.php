@@ -20,6 +20,18 @@ class Playbook extends Base
     protected $action = '';
 
     /**
+     * adds `ask-become-pass` option to ansible-playbook
+     *
+     * @return $this
+     */
+    public function askBecomePass()
+    {
+        $this->option('--ask-become-pass');
+
+        return $this;
+    }
+
+    /**
      * adds `become` option to ansible-playbook
      *
      * @return $this

@@ -7,11 +7,12 @@ class AnsibleTest extends \PHPUnit_Framework_TestCase
     public function testAnsibleBecomeOption()
     {
         $command = $this->taskAnsible('/usr/local/bin/ansible')
+            ->askBecomePass()
             ->become()
             ->becomeUser('BECOME_USER')
             ->becomeMethod('BECOME_METHOD')
             ->getCommand();
-        $expected = '/usr/local/bin/ansible  --become --become-user=BECOME_USER --become-method=BECOME_METHOD';
+        $expected = '/usr/local/bin/ansible  --ask-become-pass --become --become-user=BECOME_USER --become-method=BECOME_METHOD';
         $this->assertEquals($expected, $command);
     }
 
