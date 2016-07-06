@@ -19,6 +19,54 @@ class Ansible extends Base
 {
     protected $action = '';
 
+    /**
+     * adds `become` option to ansible
+     *
+     * @return $this
+     */
+    public function become()
+    {
+        $this->option('--become');
+
+        return $this;
+    }
+
+    /**
+     * adds `become-user` option to ansible
+     *
+     * @return $this
+     */
+    public function becomeUser($become_user = '')
+    {
+        $this->option('--become-user=' . $become_user);
+
+        return $this;
+    }
+
+    /**
+     * adds `become-method` option to ansible
+     *
+     * @return $this
+     */
+    public function becomeMethod($become_method = '')
+    {
+        $this->option('--become-method=' . $become_method);
+
+        return $this;
+    }
+
+    /**
+     * adds `inventory-file` option to ansible
+     *
+     * @return $this
+     */
+    public function inventoryFile($inventory_file = '')
+    {
+        $this->option('--inventory-file=' . $inventory_file);
+
+        return $this;
+    }
+
     public function run()
     {
         $this->printTaskInfo('ansible' . $this->arguments);
