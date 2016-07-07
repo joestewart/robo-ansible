@@ -20,6 +20,18 @@ class Ansible extends Base
     protected $action = '';
 
     /**
+     * adds `ask-pass` option to ansible
+     *
+     * @return $this
+     */
+    public function askPass()
+    {
+        $this->option('--ask-pass');
+
+        return $this;
+    }
+
+    /**
      * adds `ask-become-pass` option to ansible
      *
      * @return $this
@@ -27,6 +39,18 @@ class Ansible extends Base
     public function askBecomePass()
     {
         $this->option('--ask-become-pass');
+
+        return $this;
+    }
+
+    /**
+     * adds `ask-vault-pass` option to ansible
+     *
+     * @return $this
+     */
+    public function askVaultPass()
+    {
+        $this->option('--ask-vault-pass');
 
         return $this;
     }
@@ -48,7 +72,7 @@ class Ansible extends Base
      *
      * @return $this
      */
-    public function becomeUser($become_user = '')
+    public function becomeUser($become_user)
     {
         $this->option('--become-user=' . $become_user);
 
@@ -60,7 +84,7 @@ class Ansible extends Base
      *
      * @return $this
      */
-    public function becomeMethod($become_method = '')
+    public function becomeMethod($become_method)
     {
         $this->option('--become-method=' . $become_method);
 
@@ -72,9 +96,33 @@ class Ansible extends Base
      *
      * @return $this
      */
-    public function inventoryFile($inventory_file = '')
+    public function inventoryFile($inventory_file)
     {
         $this->option('--inventory-file=' . $inventory_file);
+
+        return $this;
+    }
+
+    /**
+     * adds `new-vault-password-file` option to ansible
+     *
+     * @return $this
+     */
+    public function newVaultPasswordFile($new_vault_password_file)
+    {
+        $this->option('--new-vault-password-file=' . $new_vault_password_file);
+
+        return $this;
+    }
+
+    /**
+     * adds `vault-password-file` option to ansible
+     *
+     * @return $this
+     */
+    public function vaultPasswordFile($vault_password_file)
+    {
+        $this->option('--vault-password-file=' . $vault_password_file);
 
         return $this;
     }

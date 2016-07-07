@@ -20,6 +20,18 @@ class Playbook extends Base
     protected $action = '';
 
     /**
+     * adds `ask-pass` option to ansible-playbook
+     *
+     * @return $this
+     */
+    public function askPass()
+    {
+        $this->option('--ask-pass');
+
+        return $this;
+    }
+
+    /**
      * adds `ask-become-pass` option to ansible-playbook
      *
      * @return $this
@@ -27,6 +39,18 @@ class Playbook extends Base
     public function askBecomePass()
     {
         $this->option('--ask-become-pass');
+
+        return $this;
+    }
+
+    /**
+     * adds `ask-vault-pass` option to ansible-playbook
+     *
+     * @return $this
+     */
+    public function askVaultPass()
+    {
+        $this->option('--ask-vault-pass');
 
         return $this;
     }
@@ -75,6 +99,30 @@ class Playbook extends Base
     public function inventoryFile($inventory_file = '')
     {
         $this->option('--inventory-file=' . $inventory_file);
+
+        return $this;
+    }
+
+    /**
+     * adds `new-vault-password-file` option to ansible-playbook
+     *
+     * @return $this
+     */
+    public function newVaultPasswordFile($new_vault_password_file)
+    {
+        $this->option('--new-vault-password-file=' . $new_vault_password_file);
+
+        return $this;
+    }
+
+    /**
+     * adds `vault-password-file` option to ansible-playbook
+     *
+     * @return $this
+     */
+    public function vaultPasswordFile($vault_password_file)
+    {
+        $this->option('--vault-password-file=' . $vault_password_file);
 
         return $this;
     }

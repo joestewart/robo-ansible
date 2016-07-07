@@ -34,6 +34,18 @@ class AnsiblePlaybookTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testAnsiblePlaybookPassOptions()
+    {
+        $command = $this->taskAnsiblePlaybook('/usr/local/bin/ansible-playbook')
+            ->askPass()
+            ->askVaultPass()
+            ->newVaultPasswordFile('NEW_VAULT_PASSWORD_FILE')
+            ->vaultPasswordFile('VAULT_PASSWORD_FILE')
+            ->getCommand();
+        $expected = '/usr/local/bin/ansible-playbook  --ask-pass --ask-vault-pass --new-vault-password-file=NEW_VAULT_PASSWORD_FILE --vault-password-file=VAULT_PASSWORD_FILE';
+        $this->assertEquals($expected, $command);
+    }
+
     public function testAnsiblePlaybookVersionOption()
     {
         $command = $this->taskAnsiblePlaybook('/usr/local/bin/ansible-playbook')

@@ -34,6 +34,18 @@ class AnsibleTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testAnsiblePassOptions()
+    {
+        $command = $this->taskAnsible('/usr/local/bin/ansible')
+            ->askPass()
+            ->askVaultPass()
+            ->newVaultPasswordFile('NEW_VAULT_PASSWORD_FILE')
+            ->vaultPasswordFile('VAULT_PASSWORD_FILE')
+            ->getCommand();
+        $expected = '/usr/local/bin/ansible  --ask-pass --ask-vault-pass --new-vault-password-file=NEW_VAULT_PASSWORD_FILE --vault-password-file=VAULT_PASSWORD_FILE';
+        $this->assertEquals($expected, $command);
+    }
+
     public function testAnsibleVersionOption()
     {
         $command = $this->taskAnsible('/usr/local/bin/ansible')
