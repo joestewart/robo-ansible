@@ -46,6 +46,18 @@ class AnsibleTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testAnsibleSshOptions()
+    {
+        $command = $this->taskAnsible('/usr/local/bin/ansible')
+            ->scpExtraArgs('SCP_EXTRA_ARGS')
+            ->sftpExtraArgs('SFTP_EXTRA_ARGS')
+            ->sshCommonArgs('SSH_COMMON_ARGS')
+            ->sshExtraArgs('SSH_EXTRA_ARGS')
+            ->getCommand();
+        $expected = '/usr/local/bin/ansible  --scp-extra-arg=SCP_EXTRA_ARGS --sftp-extra-arg=SFTP_EXTRA_ARGS --ssh-common-arg=SSH_COMMON_ARGS --ssh-extra-arg=SSH_EXTRA_ARGS';
+        $this->assertEquals($expected, $command);
+    }
+
     public function testAnsibleVersionOption()
     {
         $command = $this->taskAnsible('/usr/local/bin/ansible')

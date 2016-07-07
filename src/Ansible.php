@@ -116,6 +116,54 @@ class Ansible extends Base
     }
 
     /**
+     * adds `scp-extra-arg` option to ansible
+     *
+     * @return $this
+     */
+    public function scpExtraArgs($scp_extra_arg)
+    {
+        $this->option('--scp-extra-arg=' . $scp_extra_arg);
+
+        return $this;
+    }
+
+    /**
+     * adds `sftp-extra-arg` option to ansible
+     *
+     * @return $this
+     */
+    public function sftpExtraArgs($sftp_extra_arg)
+    {
+        $this->option('--sftp-extra-arg=' . $sftp_extra_arg);
+
+        return $this;
+    }
+
+    /**
+     * adds `ssh-common-arg` option to ansible
+     *
+     * @return $this
+     */
+    public function sshCommonArgs($ssh_common_arg)
+    {
+        $this->option('--ssh-common-arg=' . $ssh_common_arg);
+
+        return $this;
+    }
+
+    /**
+     * adds `ssh-extra-arg` option to ansible
+     *
+     * @return $this
+     */
+    public function sshExtraArgs($ssh_extra_arg)
+    {
+        $this->option('--ssh-extra-arg=' . $ssh_extra_arg);
+
+        return $this;
+    }
+
+    /**
      * adds `vault-password-file` option to ansible
      *
      * @return $this

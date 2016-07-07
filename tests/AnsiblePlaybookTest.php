@@ -46,6 +46,18 @@ class AnsiblePlaybookTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $command);
     }
 
+    public function testAnsiblePlaybookSshOptions()
+    {
+        $command = $this->taskAnsiblePlaybook('/usr/local/bin/ansible-playbook')
+            ->scpExtraArgs('SCP_EXTRA_ARGS')
+            ->sftpExtraArgs('SFTP_EXTRA_ARGS')
+            ->sshCommonArgs('SSH_COMMON_ARGS')
+            ->sshExtraArgs('SSH_EXTRA_ARGS')
+            ->getCommand();
+        $expected = '/usr/local/bin/ansible-playbook  --scp-extra-arg=SCP_EXTRA_ARGS --sftp-extra-arg=SFTP_EXTRA_ARGS --ssh-common-arg=SSH_COMMON_ARGS --ssh-extra-arg=SSH_EXTRA_ARGS';
+        $this->assertEquals($expected, $command);
+    }
+
     public function testAnsiblePlaybookVersionOption()
     {
         $command = $this->taskAnsiblePlaybook('/usr/local/bin/ansible-playbook')
