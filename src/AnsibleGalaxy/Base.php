@@ -3,8 +3,9 @@ namespace JoeStewart\Robo\Task\Ansible\AnsibleGalaxy;
 
 use Robo\Task\BaseTask;
 use Robo\Exception\TaskException;
+use Robo\Contract\CommandInterface;
 
-abstract class Base extends BaseTask
+abstract class Base extends BaseTask implements CommandInterface
 {
     use \Robo\Common\ExecOneCommand;
 

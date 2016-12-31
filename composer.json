@@ -2,6 +2,7 @@
     "name": "jstewart/robo-ansible",
     "description": "Ansible tasks for Robo Task Runner",
     "license": "MIT",
+    "type": "robo-tasks",
     "authors": [
         {
             "name": "Joe Stewart",
@@ -14,7 +15,8 @@
         }
     },
     "require": {
-        "consolidation/robo": "~0.7.2",
+        "php": ">=5.5.0",
+        "consolidation/Robo": "~1",
         "symfony/event-dispatcher": "~2.5|~3.0"
     },
     "require-dev": {
