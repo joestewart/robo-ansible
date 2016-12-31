@@ -1,8 +1,6 @@
 <?php
 namespace JoeStewart\Robo\Task\Ansible;
 
-use Robo\Container\SimpleServiceProvider;
-
 trait loadTasks 
 {
 
