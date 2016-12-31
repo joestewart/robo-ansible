@@ -15,7 +15,7 @@ trait Ansible
      */
     public function ansible($arg = '')
     {
-        $result = $this->taskAnsible()->arg($arg)->run();
+        $this->taskAnsible()->arg($arg)->run();
     }
 
     /**
@@ -28,7 +28,7 @@ trait Ansible
      */
     public function ansibleHelp()
     {
-        $result = $this->taskAnsible()->help()->run();
+        $this->taskAnsible()->help()->run();
     }
 
     /**
@@ -41,7 +41,7 @@ trait Ansible
      */
     public function ansibleVersion()
     {
-        $result = $this->taskAnsible()->version()->run();
+        $this->taskAnsible()->version()->run();
     }
 
     /**
@@ -53,7 +53,7 @@ trait Ansible
      */
     public function ansiblegalaxyDelete($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyDelete()->arg($arg)->run();
+        $this->taskAnsibleGalaxyDelete()->arg($arg)->run();
     }
 
     /**
@@ -65,7 +65,7 @@ trait Ansible
      */
     public function ansiblegalaxyHelp($arg = '')
     {
-        $result = $this->taskAnsibleGalaxy()->arg($arg)->help()->run();
+        $this->taskAnsibleGalaxy()->arg($arg)->help()->run();
     }
 
     /**
@@ -77,7 +77,7 @@ trait Ansible
      */
     public function ansiblegalaxyImport($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyImport()->arg($arg)->run();
+        $this->taskAnsibleGalaxyImport()->arg($arg)->run();
     }
 
     /**
@@ -89,7 +89,7 @@ trait Ansible
      */
     public function ansiblegalaxyInfo($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyInfo()->arg($arg)->run();
+        $this->taskAnsibleGalaxyInfo()->arg($arg)->run();
     }
 
     /**
@@ -101,7 +101,7 @@ trait Ansible
      */
     public function ansiblegalaxyInit($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyInit()->arg($arg)->run();
+        $this->taskAnsibleGalaxyInit()->arg($arg)->run();
     } 
 
     /**
@@ -113,7 +113,7 @@ trait Ansible
      */
     public function ansiblegalaxyInstall($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyInstall()->arg($arg)->run();
+        $this->taskAnsibleGalaxyInstall()->arg($arg)->run();
     }
  
     /**
@@ -125,7 +125,7 @@ trait Ansible
      */
     public function ansiblegalaxyList($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyList()->arg($arg)->run();
+        $this->taskAnsibleGalaxyList()->arg($arg)->run();
     }
     
     /**
@@ -137,7 +137,7 @@ trait Ansible
      */
     public function ansiblegalaxyLogin($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyLogin()->arg($arg)->run();
+        $this->taskAnsibleGalaxyLogin()->arg($arg)->run();
     }
 
     /**
@@ -149,7 +149,7 @@ trait Ansible
      */
     public function ansiblegalaxyRemove($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyRemove()->arg($arg)->run();
+        $this->taskAnsibleGalaxyRemove()->arg($arg)->run();
     }
 
     /**
@@ -161,7 +161,7 @@ trait Ansible
      */
     public function ansiblegalaxySearch($arg = '')
     {
-        $result = $this->taskAnsibleGalaxySearch()->arg($arg)->run();
+        $this->taskAnsibleGalaxySearch()->arg($arg)->run();
     }
 
     /**
@@ -173,7 +173,7 @@ trait Ansible
      */
     public function ansiblegalaxySetup($arg = '')
     {
-        $result = $this->taskAnsibleGalaxySetup()->arg($arg)->run();
+        $this->taskAnsibleGalaxySetup()->arg($arg)->run();
     }
 
     /**
@@ -185,7 +185,7 @@ trait Ansible
      */
     public function ansiblegalaxyVersion()
     {
-        $result = $this->taskAnsibleGalaxy()->version()->run();
+        $this->taskAnsibleGalaxy()->version()->run();
     }
 
     /**
@@ -198,7 +198,7 @@ trait Ansible
      */
     public function ansibleplaybook($arg = '')
     {
-        $result = $this->taskAnsiblePlaybook()->arg($arg)->run();
+        $this->taskAnsiblePlaybook()->arg($arg)->run();
     }
 
     /**
@@ -211,7 +211,7 @@ trait Ansible
      */
     public function ansibleplaybookHelp()
     {
-        $result = $this->taskAnsiblePlaybook()->help()->run();
+        $this->taskAnsiblePlaybook()->help()->run();
     }
 
     /**
@@ -224,7 +224,7 @@ trait Ansible
      */
     public function ansibleplaybookVersion()
     {
-        $result = $this->taskAnsiblePlaybook()->version()->run();
+        $this->taskAnsiblePlaybook()->version()->run();
     }
 
 }
