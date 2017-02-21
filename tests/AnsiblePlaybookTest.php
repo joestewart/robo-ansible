@@ -1,9 +1,30 @@
 <?php
 
-class AnsiblePlaybookTest extends \PHPUnit_Framework_TestCase
+use League\Container\ContainerAwareInterface;
+use League\Container\ContainerAwareTrait;
+use Symfony\Component\Console\Output\NullOutput;
+use Robo\TaskAccessor;
+use Robo\Robo;
+
+class AnsiblePlaybookTest extends \PHPUnit_Framework_TestCase implements ContainerAwareInterface
 {
     use \JoeStewart\Robo\Task\Ansible\AnsiblePlaybook\loadTasks;
+    use TaskAccessor;
+    use ContainerAwareTrait;
 
+    // Set up the Robo container so that we can create tasks in our tests.
+    function setup()
+    {
+        $container = Robo::createDefaultContainer(null, new NullOutput());
+        $this->setContainer($container);
+    }
+    // Scaffold the collection builder
+    public function collectionBuilder()
+    {
+        $emptyRobofile = new \Robo\Tasks;
+        return $this->getContainer()->get('collectionBuilder', [$emptyRobofile]);
+    }
+    
     public function testAnsibleBecomeOption()
     {
         $command = $this->taskAnsiblePlaybook('/usr/local/bin/ansible-playbook')

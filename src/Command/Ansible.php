@@ -8,253 +8,223 @@ trait Ansible
      /**
      * Ansible task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/Status.php
+     * 
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansible($arg = '')
     {
-        $result = $this->taskAnsible()->arg($arg)->run();
-        return $result;
+        $this->taskAnsible()->arg($arg)->run();
     }
 
     /**
      * Ansible Help task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/Status.php
+     * 
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansibleHelp()
     {
-        $result = $this->taskAnsible()->help()->run();
-        return $result;
+        $this->taskAnsible()->help()->run();
     }
 
     /**
      * Ansible Version task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/Status.php
+     * 
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansibleVersion()
     {
-        $result = $this->taskAnsible()->version()->run();
-        return $result;
+        $this->taskAnsible()->version()->run();
     }
 
     /**
      * Ansible Galaxy Delete task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Delete.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyDelete($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyDelete()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyDelete()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Help task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/List.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyHelp($arg = '')
     {
-        $result = $this->taskAnsibleGalaxy()->arg($arg)->help()->run();
-        return $result;
+        $this->taskAnsibleGalaxy()->arg($arg)->help()->run();
     }
 
     /**
      * Ansible Galaxy Import task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Import.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyImport($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyImport()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyImport()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Info task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Info.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyInfo($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyInfo()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyInfo()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Init task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Init.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyInit($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyInit()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyInit()->arg($arg)->run();
     } 
 
     /**
      * Ansible Galaxy Install task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Install.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyInstall($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyInstall()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyInstall()->arg($arg)->run();
     }
  
     /**
      * Ansible Galaxy List task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/List.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyList($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyList()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyList()->arg($arg)->run();
     }
     
     /**
      * Ansible Galaxy List task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/List.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyLogin($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyLogin()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyLogin()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Remove task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Remove.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyRemove($arg = '')
     {
-        $result = $this->taskAnsibleGalaxyRemove()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxyRemove()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Search task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Search.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxySearch($arg = '')
     {
-        $result = $this->taskAnsibleGalaxySearch()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxySearch()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Setup task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/Setup.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxySetup($arg = '')
     {
-        $result = $this->taskAnsibleGalaxySetup()->arg($arg)->run();
-        return $result;
+        $this->taskAnsibleGalaxySetup()->arg($arg)->run();
     }
 
     /**
      * Ansible Galaxy Version task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/AnsibleGalaxy/List.php
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansiblegalaxyVersion()
     {
-        $result = $this->taskAnsibleGalaxy()->version()->run();
-        return $result;
+        $this->taskAnsibleGalaxy()->version()->run();
     }
 
     /**
      * Ansible Playbook task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/Status.php
+     * 
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansibleplaybook($arg = '')
     {
-        $result = $this->taskAnsiblePlaybook()->arg($arg)->run();
-        return $result;
+        $this->taskAnsiblePlaybook()->arg($arg)->run();
     }
 
     /**
      * Ansible Playbook Help task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/Status.php
+     * 
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansibleplaybookHelp()
     {
-        $result = $this->taskAnsiblePlaybook()->help()->run();
-        return $result;
+        $this->taskAnsiblePlaybook()->help()->run();
     }
 
     /**
      * Ansible Playbook Version task.
      *
-     * @see  https://github.com/joestewart/robo-ansible/blob/master/src/Task/Ansible/Status.php
+     * 
      * @link https://packagist.org/packages/joestewart/robo-ansible
      *
      * @return object Result
      */
     public function ansibleplaybookVersion()
     {
-        $result = $this->taskAnsiblePlaybook()->version()->run();
-        return $result;
+        $this->taskAnsiblePlaybook()->version()->run();
     }
 
 }

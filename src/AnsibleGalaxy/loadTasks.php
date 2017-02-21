@@ -1,38 +1,15 @@
 <?php
 namespace JoeStewart\Robo\Task\Ansible\AnsibleGalaxy;
 
-use Robo\Container\SimpleServiceProvider;
-
 trait loadTasks 
 {
-
-    /**
-     * Return services.
-     */
-    public static function getAnsibleGalaxyServices()
-    {
-        return new SimpleServiceProvider(
-            [
-                'taskAnsibleGalaxy' => Galaxy::class,
-                'taskAnsibleGalaxyDelete' => Delete::class,
-                'taskAnsibleGalaxyImport' => Import::class,
-                'taskAnsibleGalaxyInit' => Init::class,
-                'taskAnsibleGalaxyInstall' => Install::class,
-                'taskAnsibleGalaxyList' => ListRoles::class,
-                'taskAnsibleGalaxyLogin' => Login::class,
-                'taskAnsibleGalaxyRemove' => Remove::class,
-                'taskAnsibleGalaxySearch' => Search::class,
-                'taskAnsibleGalaxySetup' => Setup::class,
-            ]
-        );
-    }
 
     /**
      * @param null $pathToAnsible
      * @return AnsibleGalaxyVersion
      */
     protected function taskAnsibleGalaxy($pathToAnsibleGalaxy = null) {
-        return new Galaxy($pathToAnsibleGalaxy);
+        return $this->task(Galaxy::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -40,7 +17,7 @@ trait loadTasks
      * @return AnsibleGalaxyDelete
      */
     protected function taskAnsibleGalaxyDelete($pathToAnsibleGalaxy = null) {
-        return new Delete($pathToAnsibleGalaxy);
+        return $this->task(Delete::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -48,7 +25,7 @@ trait loadTasks
      * @return AnsibleGalaxyImport
      */
     protected function taskAnsibleGalaxyImport($pathToAnsibleGalaxy = null) {
-        return new Import($pathToAnsibleGalaxy);
+        return $this->task(Import::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -56,7 +33,7 @@ trait loadTasks
      * @return AnsibleGalaxyInfo
      */
     protected function taskAnsibleGalaxyInfo($pathToAnsibleGalaxy = null) {
-        return new Info($pathToAnsibleGalaxy);
+        return $this->task(Info::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -64,7 +41,7 @@ trait loadTasks
      * @return AnsibleGalaxyInit
      */
     protected function taskAnsibleGalaxyInit($pathToAnsibleGalaxy = null) {
-        return new Init($pathToAnsibleGalaxy);
+        return $this->task(Init::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -72,7 +49,7 @@ trait loadTasks
      * @return AnsibleGalaxyList
      */
     protected function taskAnsibleGalaxyInstall($pathToAnsibleGalaxy = null) {
-        return new Install($pathToAnsibleGalaxy);
+        return $this->task(Install::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -80,7 +57,7 @@ trait loadTasks
      * @return AnsibleGalaxyList
      */
     protected function taskAnsibleGalaxyList($pathToAnsibleGalaxy = null) {
-        return new ListRoles($pathToAnsibleGalaxy);
+        return $this->task(ListRoles::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -88,7 +65,7 @@ trait loadTasks
      * @return AnsibleGalaxyLogin
      */
     protected function taskAnsibleGalaxyLogin($pathToAnsibleGalaxy = null) {
-        return new Login($pathToAnsibleGalaxy);
+        return $this->task(Login::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -96,7 +73,7 @@ trait loadTasks
      * @return AnsibleGalaxyRemove
      */
     protected function taskAnsibleGalaxyRemove($pathToAnsibleGalaxy = null) {
-        return new Remove($pathToAnsibleGalaxy);
+        return $this->task(Remove::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -104,7 +81,7 @@ trait loadTasks
      * @return AnsibleGalaxySearch
      */
     protected function taskAnsibleGalaxySearch($pathToAnsibleGalaxy = null) {
-        return new Search($pathToAnsibleGalaxy);
+        return $this->task(Search::class, $pathToAnsibleGalaxy);
     }
 
     /**
@@ -112,7 +89,7 @@ trait loadTasks
      * @return AnsibleGalaxySearch
      */
     protected function taskAnsibleGalaxySetup($pathToAnsibleGalaxy = null) {
-        return new Setup($pathToAnsibleGalaxy);
+        return $this->task(Setup::class, $pathToAnsibleGalaxy);
     }
 
 }

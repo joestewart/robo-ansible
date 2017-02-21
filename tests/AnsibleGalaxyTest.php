@@ -1,8 +1,29 @@
 <?php
 
-class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
+use League\Container\ContainerAwareInterface;
+use League\Container\ContainerAwareTrait;
+use Symfony\Component\Console\Output\NullOutput;
+use Robo\TaskAccessor;
+use Robo\Robo;
+
+class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase implements ContainerAwareInterface
 {
     use \JoeStewart\Robo\Task\Ansible\AnsibleGalaxy\loadTasks;
+    use TaskAccessor;
+    use ContainerAwareTrait;
+
+    // Set up the Robo container so that we can create tasks in our tests.
+    function setup()
+    {
+        $container = Robo::createDefaultContainer(null, new NullOutput());
+        $this->setContainer($container);
+    }
+    // Scaffold the collection builder
+    public function collectionBuilder()
+    {
+        $emptyRobofile = new \Robo\Tasks;
+        return $this->getContainer()->get('collectionBuilder', [$emptyRobofile]);
+    }
 
     public function testAnsibleGalaxyHelpOption()
     {
@@ -61,7 +82,8 @@ class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
     public function testAnsibleGalaxyDeleteAction()
     {
         $command = $this->taskAnsibleGalaxyDelete('/usr/local/bin/ansible-galaxy')
-            ->arg('github_user github_repo')
+            ->arg('github_user')
+            ->arg('github_repo')
             ->ignoreCerts()
             ->server('API_SERVER')
             ->getCommand();
@@ -72,7 +94,8 @@ class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
     public function testAnsibleGalaxyImportAction()
     {
         $command = $this->taskAnsibleGalaxyImport('/usr/local/bin/ansible-galaxy')
-            ->arg('github_user github_repo')
+            ->arg('github_user')
+            ->arg('github_repo')
             ->branch('REFERENCE')
             ->noWait()
             ->status()
@@ -156,7 +179,10 @@ class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase
     public function testAnsibleGalaxySetupAction()
     {
         $command = $this->taskAnsibleGalaxySetup('/usr/local/bin/ansible-galaxy')
-            ->arg('source github_user github_repo secret')
+            ->arg('source')
+            ->arg('github_user')
+            ->arg('github_repo')
+            ->arg('secret')
             ->getCommand();
         $expected = '/usr/local/bin/ansible-galaxy setup source github_user github_repo secret';
         $this->assertEquals($expected, $command);
