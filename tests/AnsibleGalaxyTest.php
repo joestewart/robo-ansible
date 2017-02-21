@@ -6,7 +6,7 @@ use Symfony\Component\Console\Output\NullOutput;
 use Robo\TaskAccessor;
 use Robo\Robo;
 
-class AnsibleGalaxyTest extends \PHPUnit_Framework_TestCase implements ContainerAwareInterface
+class AnsibleGalaxyTest extends \PHPUnit\Framework\TestCase implements ContainerAwareInterface
 {
     use \JoeStewart\Robo\Task\Ansible\AnsibleGalaxy\loadTasks;
     use TaskAccessor;
