@@ -1,5 +1,5 @@
 {
-    "name": "jstewart/robo-ansible",
+    "name": "nateageek/robo-ansible",
     "description": "Ansible tasks for Robo Task Runner",
     "license": "MIT",
     "type": "robo-tasks",
