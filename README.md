@@ -26,7 +26,7 @@ This package provides Robo tasks for the following ansible commands:
 ##Installation
 
 ```
-composer require joestewart/robo-ansible
+composer require jstewart/robo-ansible
 ```
      
 ##Usage
