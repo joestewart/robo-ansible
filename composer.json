@@ -16,7 +16,7 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "consolidation/Robo": "~1",
+        "consolidation/robo": "~1",
         "symfony/event-dispatcher": "~2.5|~3.0|~4.0"
     },
     "require-dev": {
